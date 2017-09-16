@@ -23,20 +23,18 @@
 
 - name: source scl_source enable
   lineinfile:
-    path: "/etc/profile.d/{{ item.name }}.sh"
+    path: "{{ ansible_env.HOME }}/.bashrc"
     regexp: "^source scl_source"
     line: "source scl_source {{ item.state }} {{ item.name }}"
-    owner: "root"
-    group: "root"
-    mode: "0644"
+    insertafter: "EOF"
     state: "present"
     create: "yes"
   with_items: "{{ _scl }}"
   tags: git
 
-- name: . /etc/profile.d
+- name: . ~/.bashrc
   shell: |
-    . /etc/profile.d/{{ item.name }}.sh
+    . {{ ansible_env.HOME }}/.bashrc
   with_items: "{{ _scl }}"
   changed_when: false
   tags: git
