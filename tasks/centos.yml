@@ -29,6 +29,8 @@
     owner: "root"
     group: "root"
     mode: "0644"
+    state: "present"
+    create: "yes"
   with_items: "{{ _scl }}"
   tags: git
 
