@@ -31,14 +31,12 @@
   remote_user: root
   tasks:
     - name: git --version
-      become: true
       shell: |
         git --version
       register: git_version_result
       changed_when: git_version_result.rc != 0
     
     - name: git --help
-      become: true
       shell: |
         git --help
       register: git_help_result

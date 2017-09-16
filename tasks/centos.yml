@@ -38,6 +38,7 @@
   shell: |
     . /etc/profile.d/{{ item.name }}.sh
   with_items: "{{ _scl }}"
+  become: true
   changed_when: false
   tags: git
 
