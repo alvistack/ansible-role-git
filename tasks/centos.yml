@@ -21,6 +21,14 @@
   with_items: "{{ _yum }}"
   tags: git
 
+- name: scl enable
+  shell: |
+    scl {{ item.state }} {{ item.name }} {{ item.shell }}
+  with_items: "{{ _scl }}"
+  register: scl_enable_result
+  changed_when: scl_enabled_result.rc != 0
+  tags: git
+
 - name: yum -y clean all
   shell: |
     yum -y clean all
