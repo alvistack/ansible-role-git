@@ -34,6 +34,13 @@
   with_items: "{{ _scl }}"
   tags: git
 
+- name: . /etc/profile.d
+  shell: |
+    . /etc/profile.d/{{ item.name }}.sh
+  with_items: "{{ _scl }}"
+  changed_when: false
+  tags: git
+
 - name: yum -y clean all
   shell: |
     yum -y clean all
