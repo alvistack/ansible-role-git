@@ -17,7 +17,8 @@
 _yum: [
   { state: "absent", name: "git" },
   { state: "latest", name: "rh-git29" },
+  { state: "latest", name: "scl-utils" },
 ]
 _scl: [
-  { state: "enable", name: "rh-git29", shell: "bash" },
+  { state: "enable", name: "rh-git29" },
 ]
