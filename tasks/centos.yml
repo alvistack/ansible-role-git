@@ -24,7 +24,7 @@
 - name: source scl_source enable
   lineinfile:
     path: "/etc/profile.d/{{ item.name }}.sh"
-    regex: "^source scl_source"
+    regexp: "^source scl_source"
     line: "source scl_source {{ item.state }} {{ item.name }}"
     owner: "root"
     group: "root"
