@@ -32,12 +32,12 @@
   tasks:
     - name: git --version
       shell: |
-        sudo -iu {{ ansible_user }} git --version
+        git --version
       register: git_version_result
       changed_when: git_version_result.rc != 0
     
     - name: git --help
       shell: |
-        sudo -iu {{ ansible_user }} git --help
+        git --help
       register: git_help_result
       changed_when: git_help_result.rc != 0

@@ -21,15 +21,16 @@
   with_items: "{{ _yum }}"
   tags: git
 
-- name: source scl_source enable
-  lineinfile:
-    path: "/etc/profile.d/{{ item.name }}.sh"
-    regexp: "^source scl_source"
-    line: "source scl_source {{ item.state }} {{ item.name }}"
-    insertafter: "EOF"
-    state: "present"
-    create: "yes"
-  with_items: "{{ _scl }}"
+- name: symlink binary
+  shell: |
+    ln -fs /opt/rh/{{ item.name }}/root/usr/local/sbin/* /usr/local/sbin/
+    ln -fs /opt/rh/{{ item.name }}/root/usr/local/bin/* /usr/local/bin/
+    ln -fs /opt/rh/{{ item.name }}/root/usr/sbin/* /usr/sbin/
+    ln -fs /opt/rh/{{ item.name }}/root/usr/bin/* /usr/bin/
+    ln -fs /opt/rh/{{ item.name }}/root/sbin/* /sbin/
+    ln -fs /opt/rh/{{ item.name }}/root/bin/* /bin/
+  with_items: "{{ _yum }}"
+  changed_when: false
   tags: git
 
 - name: yum -y clean all
