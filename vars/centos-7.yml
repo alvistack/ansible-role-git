@@ -15,9 +15,5 @@
 # limitations under the License.
 
 _yum: [
-  { state: "absent", name: "git" },
   { state: "latest", name: "rh-git29" },
-]
-_scl: [
-  { state: "enable", name: "rh-git29", shell: "bash" },
 ]
