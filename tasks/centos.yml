@@ -23,7 +23,7 @@
 
 - name: source scl_source enable
   lineinfile:
-    path: "/etc/environment"
+    path: "/etc/profile.d/{{ item.name }}.sh"
     regexp: "^source scl_source"
     line: "source scl_source {{ item.state }} {{ item.name }}"
     insertafter: "EOF"
