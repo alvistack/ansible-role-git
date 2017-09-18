@@ -18,26 +18,7 @@ This role was designed for Ubuntu 16.04/14.04 and CentOS 7/6.
 Role Variables
 --------------
 
-<table>
-<colgroup>
-<col width="20%" />
-<col width="20%" />
-<col width="20%" />
-<col width="20%" />
-<col width="20%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>parameter</th>
-<th>required</th>
-<th>default</th>
-<th>choices</th>
-<th>comments</th>
-</tr>
-</thead>
-<tbody>
-</tbody>
-</table>
+No additional role variables.
 
 Dependencies
 ------------
