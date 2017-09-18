@@ -11,7 +11,7 @@ Ansible Role for GIT Installation.
 Requirements
 ------------
 
-This role require Ansible 2.3 or higher.
+This role require Ansible 2.4 or higher.
 
 This role was designed for Ubuntu 16.04/14.04 and CentOS 7/6.
 
