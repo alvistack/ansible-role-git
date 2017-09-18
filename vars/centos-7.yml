@@ -14,6 +14,4 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-_yum: [
-  { state: "latest", name: "rh-git29" },
-]
+_git: "rh-git29"

@@ -16,20 +16,20 @@
 
 - name: yum install
   yum:
-    name: "{{ item.name }}"
-    state: "{{ item.state }}"
-  with_items: "{{ _yum }}"
+    name: "{{ _git }}"
+    state: "latest"
   tags: git
 
 - name: symlink binary
   shell: |
-    ln -fs /opt/rh/{{ item.name }}/root/usr/local/sbin/* /usr/local/sbin/
-    ln -fs /opt/rh/{{ item.name }}/root/usr/local/bin/* /usr/local/bin/
-    ln -fs /opt/rh/{{ item.name }}/root/usr/sbin/* /usr/sbin/
-    ln -fs /opt/rh/{{ item.name }}/root/usr/bin/* /usr/bin/
-    ln -fs /opt/rh/{{ item.name }}/root/sbin/* /sbin/
-    ln -fs /opt/rh/{{ item.name }}/root/bin/* /bin/
-  with_items: "{{ _yum }}"
+    ln -fs /opt/rh/{{ _git }}/root/{{ item }}/* /{{ item }}/
+  with_items:
+    - "usr/local/sbin"
+    - "usr/local/bin"
+    - "usr/sbin"
+    - "usr/bin"
+    - "sbin"
+    - "bin"
   changed_when: false
   tags: git
 
