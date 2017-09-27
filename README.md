@@ -1,7 +1,7 @@
 Ansible Role for GIT
 ====================
 
-[![Build Status](https://travis-ci.org/alvistack/ansible-role-git.svg?branch=master)](https://travis-ci.org/alvistack/ansible-role-git)
+[![Travis](https://img.shields.io/travis/alvistack/ansible-role-git.svg)](https://travis-ci.org/alvistack/ansible-role-git)
 [![GitHub release](https://img.shields.io/github/release/alvistack/ansible-role-git.svg)](https://github.com/alvistack/ansible-role-git)
 [![GitHub license](https://img.shields.io/github/license/alvistack/ansible-role-git.svg)](https://github.com/alvistack/ansible-role-git/blob/master/LICENSE)
 [![Ansible Role](https://img.shields.io/badge/galaxy-alvistack.git-blue.svg)](https://galaxy.ansible.com/alvistack/git)
