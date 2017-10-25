@@ -14,4 +14,8 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-_git: "rh-git29"
+_yum: [
+  { state: "latest", name: "epel-release" },
+  { state: "latest", name: "git" },
+  { state: "latest", name: "gitflow" },
+]
