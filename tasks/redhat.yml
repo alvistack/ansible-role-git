@@ -14,29 +14,11 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-- name: yum install centos-release-scl
-  yum:
-    name: "centos-release-scl"
-    state: "latest"
-  tags: git
-
 - name: yum install
   yum:
-    name: "{{ _git }}"
-    state: "latest"
-  tags: git
-
-- name: symlink binary
-  shell: |
-    ln -fs /opt/rh/{{ _git }}/root/{{ item }}/* /{{ item }}/
-  with_items:
-    - "usr/local/sbin"
-    - "usr/local/bin"
-    - "usr/sbin"
-    - "usr/bin"
-    - "sbin"
-    - "bin"
-  changed_when: false
+    name: "{{ item.name }}"
+    state: "{{ item.state }}"
+  with_items: "{{ _yum }}"
   tags: git
 
 - name: yum -y clean all
