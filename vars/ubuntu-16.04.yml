@@ -19,5 +19,5 @@ _apt_repository: [
 ]
 _apt: [
   { state: "latest", name: "git" },
-  { state: "latest", name: "gitflow" },
+  { state: "latest", name: "git-flow" },
 ]
