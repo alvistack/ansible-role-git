@@ -6,8 +6,8 @@ Ansible Role for GIT
 
 ### Major Changes
 
--   Install Git 2.15.0 on Ubuntu 16.04/14.04 from PPA
--   Install Git with stock package on CentOS 7/6
+-   Install Git on Ubuntu 16.04/14.04 from PPA
+-   Install Git on CentOS 7/6 from stock package
 -   Update test cases
 
 1.0.0 - 2017-09-25
