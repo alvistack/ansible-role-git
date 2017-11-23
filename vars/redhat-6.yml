@@ -17,5 +17,4 @@
 _yum: [
   { state: "latest", name: "epel-release" },
   { state: "latest", name: "git" },
-  { state: "latest", name: "gitflow" },
 ]
