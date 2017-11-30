@@ -1,6 +1,13 @@
 Ansible Role for GIT
 ====================
 
+1.2.0 - TBC
+-----------
+
+### Major Changes
+
+-   Keep Ubuntu clean by NOT usign PPA
+
 1.1.0 - 2017-11-23
 ------------------
 

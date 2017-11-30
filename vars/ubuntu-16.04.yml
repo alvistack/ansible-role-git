@@ -14,9 +14,6 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-_apt_repository: [
-  { state: "present", repo: "ppa:git-core/ppa" },
-]
 _apt: [
   { state: "latest", name: "git" },
 ]
