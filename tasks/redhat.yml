@@ -20,9 +20,3 @@
     state: "{{ item.state }}"
   with_items: "{{ _yum }}"
   tags: git
-
-- name: yum -y clean all
-  shell: |
-    yum -y clean all
-  changed_when: false
-  tags: git
