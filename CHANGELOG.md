@@ -9,6 +9,7 @@ Ansible Role for GIT
 -   Upgrade Ansible support to 2.6 or higher
 -   Remove Ubuntu 14.04 support
 -   Add Ubuntu 18.04 support
+-   Install Git on CentOS 7/6 from IUS
 -   Keep APT/YUM cache as-is
 
 1.1.0 - 2017-11-23
