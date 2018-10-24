@@ -1,29 +1,24 @@
-Ansible Role for GIT
-====================
+# Ansible Role for GIT
 
-1.2.0 - TBC
------------
+## 1.2.0 - TBC
 
 ### Major Changes
 
--   Upgrade Ansible support to 2.6 or higher
--   Remove Ubuntu 14.04 support
--   Add Ubuntu 18.04 support
--   Install Git on CentOS 6/7 from IUS
--   Keep APT/YUM cache as-is
+  - Upgrade Ansible support to 2.6 or higher
+  - Remove Ubuntu 14.04 support
+  - Add Ubuntu 18.04 support
+  - Install Git on CentOS 6/7 from IUS
+  - Keep APT/YUM cache as-is
 
-1.1.0 - 2017-11-23
-------------------
+## 1.1.0 - 2017-11-23
 
 ### Major Changes
 
--   Install Git on Ubuntu 16.04/14.04 from PPA
--   Install Git on CentOS 7/6 from stock package
--   Update test cases
+  - Install Git on Ubuntu 16.04/14.04 from PPA
+  - Install Git on CentOS 7/6 from stock package
+  - Update test cases
 
-1.0.0 - 2017-09-25
-------------------
+## 1.0.0 - 2017-09-25
 
--   Ininitial release for Ansible 2.4
--   Support both Ubuntu 16.04/14.04 or RHEL/CentOS 7/6
-
+  - Ininitial release for Ansible 2.4
+  - Support both Ubuntu 16.04/14.04 or RHEL/CentOS 7/6
