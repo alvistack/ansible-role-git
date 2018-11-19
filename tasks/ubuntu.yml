@@ -21,12 +21,6 @@
   with_items: "{{ _apt_repository }}"
   tags: git
 
-- name: apt-get update
-  apt:
-    update_cache: "yes"
-  changed_when: false
-  tags: git
-
 - name: apt-get install
   apt:
     name: "{{ item.name }}"
