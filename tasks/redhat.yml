@@ -17,8 +17,6 @@
 - name: manually erase stock git only if installed
   shell: |
     yum -q list installed git && yum -yq erase git
-  args:
-    warn: false
   register: yum_erase_git_result
   changed_when: yum_erase_git_result.rc == 0
   failed_when: false
