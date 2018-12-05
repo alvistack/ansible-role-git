@@ -15,6 +15,5 @@
 # limitations under the License.
 
 _yum: [
-  { state: "latest", name: "https://centos6.iuscommunity.org/ius-release.rpm" },
   { state: "latest", name: "git2u" },
 ]
