@@ -7,6 +7,8 @@
   - CI with ansible-lint and galaxy-lint-rules
   - Use shell only when shell functionality is required
   - Replace tests from Docker to LXD
+  - Don't install epel-release, conflict with RHEL
+  - Don't install ius-release, assume yum already handle it
 
 ## 2.0.0 - 2018-10-25
 
