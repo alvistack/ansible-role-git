@@ -19,8 +19,8 @@
     yum -q list installed git && yum -yq erase git
   args:
     warn: false
-  register: yum_erase_git_result
-  changed_when: yum_erase_git_result.rc == 0
+  register: result
+  changed_when: result is not succeeded
   ignore_errors: yes
   tags: git
 
