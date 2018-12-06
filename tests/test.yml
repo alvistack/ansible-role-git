@@ -34,5 +34,5 @@
   tasks:
     - name: git --version
       command: git --version
-      register: git_version_result
-      changed_when: git_version_result.rc != 0
+      register: result
+      changed_when: result is not succeeded
