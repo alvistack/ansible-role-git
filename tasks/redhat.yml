@@ -21,7 +21,7 @@
     warn: false
   register: yum_erase_git_result
   changed_when: yum_erase_git_result.rc == 0
-  failed_when: false
+  ignore_errors: yes
   tags: git
 
 - name: yum install
