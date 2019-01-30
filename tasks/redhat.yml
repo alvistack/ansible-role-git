@@ -20,7 +20,7 @@
   args:
     warn: false
   changed_when: false
-  ignore_errors: yes
+  ignore_errors: true
   tags: git
 
 - name: yum-config-manager --add-repo
@@ -31,7 +31,7 @@
   register: result
   until: result is succeeded
   changed_when: false
-  ignore_errors: yes
+  ignore_errors: true
   tags: git
 
 - name: yum install
