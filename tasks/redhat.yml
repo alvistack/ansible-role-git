@@ -16,9 +16,10 @@
 
 - name: manually erase stock git only if installed
   shell: |
+    set -o pipefail
     yum -q list installed git && yum -yq erase git
   args:
-    warn: false
+    executable: /bin/bash
   changed_when: false
   ignore_errors: true
   tags: git
