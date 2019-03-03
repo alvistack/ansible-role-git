@@ -15,7 +15,7 @@
 # limitations under the License.
 
 _yum_repository: [
-  { state: "latest", name: "https://centos7.iuscommunity.org/ius-release.rpm" },
+  { state: "latest", name: "https://rhel7.iuscommunity.org/ius-release.rpm" },
 ]
 _yum: [
   { state: "latest", name: "git2u" },
