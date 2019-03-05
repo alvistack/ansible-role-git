@@ -26,6 +26,7 @@
     name: "{{ item.name | default(None) or omit }}"
     deb: "{{ item.deb | default(None) or omit }}"
     state: "{{ item.state }}"
+    force: true
   with_items: "{{ package }}"
   register: result
   until: result is succeeded
