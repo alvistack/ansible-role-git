@@ -17,6 +17,7 @@
 _apt_repository: [
   { state: "present", repo: "ppa:git-core/ppa" },
 ]
-_apt: [
+_package: [
+  { state: "latest", name: "git-man" },
   { state: "latest", name: "git" },
 ]

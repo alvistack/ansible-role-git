@@ -4,6 +4,8 @@
 
 ### Major Changes
 
+  - Support customize install package with variable
+
 ## 2.4.0 - 2019-03-03
 
 ### Major Changes

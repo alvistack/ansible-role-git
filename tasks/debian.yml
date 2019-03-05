@@ -25,7 +25,7 @@
   apt:
     name: "{{ item.name }}"
     state: "{{ item.state }}"
-  with_items: "{{ _apt }}"
+  with_items: "{{ package }}"
   register: result
   until: result is succeeded
   tags: git
