@@ -14,16 +14,6 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-- name: manually erase stock git only if installed
-  shell: |
-    set -o pipefail
-    yum -q list installed git && yum -yq erase git
-  args:
-    executable: "/bin/bash"
-  changed_when: false
-  ignore_errors: true
-  tags: git
-
 - name: yum-config-manager --add-repo
   yum:
     name: "{{ item.name }}"
@@ -39,7 +29,7 @@
   yum:
     name: "{{ item.name }}"
     state: "{{ item.state }}"
-  with_items: "{{ _yum }}"
+  with_items: "{{ package }}"
   register: result
   until: result is succeeded
   tags: git
