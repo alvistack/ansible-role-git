@@ -5,6 +5,7 @@
 ### Major Changes
 
   - Support customize install package with variable
+  - Support `deb` for direct .deb download from URL
 
 ## 2.4.0 - 2019-03-03
 

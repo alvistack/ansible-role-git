@@ -23,7 +23,8 @@
 
 - name: apt-get install
   apt:
-    name: "{{ item.name }}"
+    name: "{{ item.name | default(None) or omit }}"
+    deb: "{{ item.deb | default(None) or omit }}"
     state: "{{ item.state }}"
   with_items: "{{ package }}"
   register: result
