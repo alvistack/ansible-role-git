@@ -14,19 +14,20 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-- name: apt-add-repository
-  apt_repository:
-    repo: "{{ item.repo }}"
-    state: "{{ item.state }}"
-  with_items: "{{ _apt_repository }}"
-  tags: git
+- hosts: all
+  remote_user: root
+  roles:
+    - role: git
+      package:
+        - { state: "present", deb: "https://launchpad.net/~git-core/+archive/ubuntu/ppa/+files/git-man_2.20.1-0ppa1~ubuntu18.04.1_all.deb" }
+        - { state: "present", deb: "https://launchpad.net/~git-core/+archive/ubuntu/ppa/+files/git_2.20.1-0ppa1~ubuntu18.04.1_amd64.deb" }
 
-- name: apt-get install
-  apt:
-    name: "{{ item.name | default(None) or omit }}"
-    deb: "{{ item.deb | default(None) or omit }}"
-    state: "{{ item.state }}"
-  with_items: "{{ package }}"
-  register: result
-  until: result is succeeded
-  tags: git
+- hosts: all
+  remote_user: root
+  tasks:
+    - name: su -l -s /bin/bash -c 'git --version'
+      command: su -l -s /bin/bash -c 'git --version'
+      args:
+        warn: false
+      register: result
+      changed_when: result is not succeeded
