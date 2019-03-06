@@ -29,7 +29,6 @@
   yum:
     name: "{{ item.name }}"
     state: "{{ item.state }}"
-    allow_downgrade: true
   with_items: "{{ package }}"
   register: result
   until: result is succeeded

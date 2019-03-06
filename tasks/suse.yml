@@ -18,7 +18,6 @@
   zypper:
     name: "{{ item.name }}"
     state: "{{ item.state }}"
-    force: true
   with_items: "{{ package }}"
   register: result
   until: result is succeeded
