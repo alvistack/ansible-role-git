@@ -1,11 +1,16 @@
 # Ansible Role for GIT
 
-## 2.5.0 - TBC
+## 2.6.0 - TBC
+
+### Major Changes
+
+## 2.5.0 - 2019-04-17
 
 ### Major Changes
 
   - Support customize install package with variable
   - Support `deb` for direct .deb download from URL
+  - Run test with `travis_wait 120`
 
 ## 2.4.0 - 2019-03-03
 
