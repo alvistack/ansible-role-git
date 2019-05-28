@@ -16,11 +16,13 @@
 
 - hosts: all
   remote_user: root
+  become: true
   roles:
     - role: git
 
 - hosts: all
   remote_user: root
+  become: true
   tasks:
     - name: su -l -s /bin/bash -c 'git --version'
       command: su -l -s /bin/bash -c 'git --version'
