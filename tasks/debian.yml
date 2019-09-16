@@ -26,7 +26,7 @@
     name: "{{ item.name | default(None) or omit }}"
     deb: "{{ item.deb | default(None) or omit }}"
     state: "{{ item.state }}"
-  loop: "{{ git_package }}"
+  loop: "{{ _apt }}"
   register: result
   until: result is succeeded
   tags: git

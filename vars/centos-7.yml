@@ -17,6 +17,6 @@
 _yum_repository: [
   { state: "latest", name: "https://centos7.iuscommunity.org/ius-release.rpm" },
 ]
-_package: [
+_yum: [
   { state: "latest", name: "git2u" },
 ]
