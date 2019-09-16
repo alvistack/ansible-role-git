@@ -14,6 +14,13 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-_package: [
+_zypper_repository: [
+  {
+    name: "devel:tools:scm",
+    repo: "https://download.opensuse.org/repositories/devel:tools:scm/openSUSE_Leap_15.0/",
+    state: "present",
+  },
+]
+_zypper: [
   { state: "latest", name: "git" },
 ]
