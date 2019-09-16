@@ -29,7 +29,7 @@
   yum:
     name: "{{ item.name }}"
     state: "{{ item.state }}"
-  loop: "{{ package }}"
+  loop: "{{ git_package }}"
   register: result
   until: result is succeeded
   tags: git
