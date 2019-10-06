@@ -14,10 +14,19 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-_zypper_repository:
-  - name: "devel:tools:scm"
-    repo: "https://download.opensuse.org/repositories/devel:/tools:/scm/openSUSE_Leap_15.1"
-    state: "present"
+- hosts: all
+  remote_user: root
+  become: true
+  roles:
+    - role: git
 
-_zypper:
-  - { state: "latest", name: "git" }
+- hosts: all
+  remote_user: root
+  become: true
+  tasks:
+    - name: su -l -s /bin/bash -c 'git --version'
+      command: su -l -s /bin/bash -c 'git --version'
+      args:
+        warn: false
+      register: result
+      changed_when: result is not succeeded
