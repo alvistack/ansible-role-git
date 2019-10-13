@@ -15,7 +15,9 @@
 # limitations under the License.
 
 _yum_repository:
+  - { state: "latest", name: "https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm" }
   - { state: "latest", name: "https://centos7.iuscommunity.org/ius-release.rpm" }
 
 _yum:
   - { state: "latest", name: "git2u" }
+  - { state: "latest", name: "gitflow" }
