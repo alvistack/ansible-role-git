@@ -24,9 +24,7 @@
   remote_user: root
   become: true
   tasks:
-    - name: su -l -s /bin/bash -c 'git --version'
-      command: su -l -s /bin/bash -c 'git --version'
-      args:
-        warn: false
+    - name: git --version
+      command: git --version
       register: result
       changed_when: result is not succeeded
