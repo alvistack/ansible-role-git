@@ -19,16 +19,3 @@
   become: true
   roles:
     - role: git
-
-- hosts: all
-  remote_user: root
-  become: true
-  tasks:
-    - name: git --version
-      shell: |
-        set -o pipefail
-        git --version
-      args:
-        executable: "/bin/bash"
-      register: result
-      changed_when: result is not succeeded
