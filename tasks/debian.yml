@@ -27,6 +27,8 @@
     repo: "{{ item.repo }}"
     state: "{{ item.state }}"
   loop: "{{ _apt_repository }}"
+  register: result
+  until: result is succeeded
   tags: git
 
 - name: apt-get install
