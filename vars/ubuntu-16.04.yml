@@ -15,7 +15,8 @@
 # limitations under the License.
 
 _apt_repository:
-  - { state: "present", repo: "ppa:git-core/ppa" }
+  - repo: "ppa:git-core/ppa"
+    state: "present"
 
 _apt:
   - { state: "latest", name: "git" }
