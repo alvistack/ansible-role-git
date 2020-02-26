@@ -33,6 +33,7 @@
   zypper:
     name: "{{ item.name }}"
     state: "{{ item.state }}"
+    force: true
   loop: "{{ _zypper }}"
   register: result
   until: result is succeeded
