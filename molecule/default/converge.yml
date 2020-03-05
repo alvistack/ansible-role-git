@@ -14,28 +14,9 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-- name: apt-get install gnupg
-  apt:
-    name: "gnupg"
-    state: "present"
-  register: result
-  until: result is succeeded
-  tags: git
-
-- name: apt-add-repository
-  apt_repository:
-    repo: "{{ item.repo }}"
-    state: "{{ item.state }}"
-  loop: "{{ _apt_repository }}"
-  register: result
-  until: result is succeeded
-  tags: git
-
-- name: apt-get install
-  apt:
-    name: "{{ item.name }}"
-    state: "{{ item.state }}"
-  loop: "{{ _apt }}"
-  register: result
-  until: result is succeeded
-  tags: git
+- hosts: all
+  remote_user: root
+  become: true
+  tasks:
+    - include_role:
+        name: git
