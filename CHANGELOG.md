@@ -10,6 +10,7 @@
   - Migrate molecule `group_vars` to file
   - Consolidate molecule tests into `default` (noop)
   - Support CentOS 8
+  - Replcae CentOS/RHEL 7 support with End Point Package Repository
 
 ## 4.2.0 - 2020-02-13
 
