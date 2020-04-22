@@ -14,8 +14,13 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+_apt_key:
+  - url: "https://keyserver.ubuntu.com/pks/lookup?op=get&search=0xE1DD270288B4E6030699E45FA1715D88E1DF1F24"
+    id: "E1DD270288B4E6030699E45FA1715D88E1DF1F24"
+    state: "present"
+
 _apt_repository:
-  - repo: "ppa:git-core/ppa"
+  - repo: "deb http://ppa.launchpad.net/git-core/ppa/ubuntu bionic main"
     state: "present"
 
 _apt:
