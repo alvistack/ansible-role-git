@@ -14,6 +14,16 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+- name: zypper install gpg2
+  vars:
+    ansible_python_interpreter: "python3"
+  zypper:
+    name: "gpg2"
+    state: "present"
+  register: result
+  until: result is succeeded
+  tags: git
+
 - name: zypper addrepo
   vars:
     ansible_python_interpreter: "python3"
