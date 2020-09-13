@@ -14,6 +14,11 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+_rpm_key:
+  - key: "https://packages.endpoint.com/endpoint-rpmsign-7.pub"
+    fingerprint: "A20D08E41D1D04A04D12CD03D027780B703DF089"
+    state: "present"
+
 _rpm_repository:
   - name: "https://packages.endpoint.com/rhel/7/os/x86_64/endpoint-repo-1.7-1.x86_64.rpm"
     state: "latest"
