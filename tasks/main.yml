@@ -105,10 +105,10 @@
     - { dest: "/etc/bash_completion.d/git-flow" }
     - { dest: "/usr/local/bin/git-flow", mode: "0755" }
 
-- name: git lfs install
+- name: git lfs install --system --skip-repo
   shell: |
     set -o pipefail
-    git lfs install
+    git lfs install --system --skip-repo
   args:
     executable: "/bin/bash"
   register: result
