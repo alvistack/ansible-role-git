@@ -27,6 +27,18 @@
       register: result
       changed_when: result is not succeeded
 
+    - name: git-flow --help
+      environment:
+        PATH: "/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+      shell: |
+        set -o pipefail
+        git-flow --help
+      args:
+        executable: "/bin/bash"
+      register: result
+      changed_when: result is not succeeded
+      failed_when: "'usage: git flow <subcommand>' not in result.stdout"
+
     - name: git-lfs --version
       shell: |
         set -o pipefail

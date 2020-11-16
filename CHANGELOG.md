@@ -4,6 +4,7 @@
 
 ### Major Changes
 
+  - Install git-flow (AVH Edition)
   - Install GIT LFS
   - Support Fedora 33
   - Remove Fedora 32 support

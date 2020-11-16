@@ -19,5 +19,7 @@ _apt_key: []
 _apt_repository: []
 
 _apt:
+  - { state: "latest", name: "bash-completion" }
   - { state: "latest", name: "git" }
   - { state: "latest", name: "git-lfs" }
+  - { state: "latest", name: "make" }

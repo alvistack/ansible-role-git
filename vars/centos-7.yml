@@ -29,5 +29,7 @@ _rpm_repository:
     state: "latest"
 
 _yum:
+  - { state: "latest", name: "bash-completion" }
   - { state: "latest", name: "git" }
   - { state: "latest", name: "git-lfs" }
+  - { state: "latest", name: "make" }
