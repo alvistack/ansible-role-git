@@ -15,13 +15,19 @@
 # limitations under the License.
 
 _rpm_key:
+  - key: "https://dl.fedoraproject.org/pub/epel/RPM-GPG-KEY-EPEL-7"
+    fingerprint: "91E97D7C4A5E96F17F3E888F6A2FAEA2352C64E5"
+    state: "present"
   - key: "https://packages.endpoint.com/endpoint-rpmsign-7.pub"
     fingerprint: "A20D08E41D1D04A04D12CD03D027780B703DF089"
     state: "present"
 
 _rpm_repository:
+  - name: "https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm"
+    state: "latest"
   - name: "https://packages.endpoint.com/rhel/7/os/x86_64/endpoint-repo-1.7-1.x86_64.rpm"
     state: "latest"
 
 _yum:
   - { state: "latest", name: "git" }
+  - { state: "latest", name: "git-lfs" }

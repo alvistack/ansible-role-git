@@ -21,3 +21,4 @@ _zypper_repository:
 
 _zypper:
   - { state: "latest", name: "git" }
+  - { state: "latest", name: "git-lfs" }

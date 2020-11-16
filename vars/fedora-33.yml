@@ -20,3 +20,4 @@ _rpm_repository: []
 
 _yum:
   - { state: "latest", name: "git" }
+  - { state: "latest", name: "git-lfs" }

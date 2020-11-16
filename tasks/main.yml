@@ -44,3 +44,12 @@
       paths:
         - "."
   ignore_errors: true
+
+- name: git lfs install
+  shell: |
+    set -o pipefail
+    git lfs install
+  args:
+    executable: "/bin/bash"
+  register: result
+  changed_when: result is not succeeded

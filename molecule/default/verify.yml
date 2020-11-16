@@ -26,3 +26,12 @@
         executable: "/bin/bash"
       register: result
       changed_when: result is not succeeded
+
+    - name: git-lfs --version
+      shell: |
+        set -o pipefail
+        git-lfs --version
+      args:
+        executable: "/bin/bash"
+      register: result
+      changed_when: result is not succeeded
