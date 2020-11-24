@@ -4,6 +4,7 @@
 
 ### Major Changes
 
+  - Migrate from Travis CI to GitLab CI
   - Install git-flow (AVH Edition)
   - Install GIT LFS
   - Support Fedora 33
