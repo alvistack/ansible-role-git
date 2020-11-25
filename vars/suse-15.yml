@@ -20,4 +20,7 @@ _zypper_repository:
     state: "present"
 
 _zypper:
+  - { state: "latest", name: "bash-completion" }
   - { state: "latest", name: "git" }
+  - { state: "latest", name: "git-lfs" }
+  - { state: "latest", name: "make" }

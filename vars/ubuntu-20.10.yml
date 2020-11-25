@@ -14,9 +14,17 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-_rpm_key: []
+_apt_key:
+  - url: "https://keyserver.ubuntu.com/pks/lookup?op=get&search=0xE1DD270288B4E6030699E45FA1715D88E1DF1F24"
+    id: "E1DD270288B4E6030699E45FA1715D88E1DF1F24"
+    state: "present"
 
-_rpm_repository: []
+_apt_repository:
+  - repo: "deb http://ppa.launchpad.net/git-core/ppa/ubuntu groovy main"
+    state: "present"
 
-_yum:
+_apt:
+  - { state: "latest", name: "bash-completion" }
   - { state: "latest", name: "git" }
+  - { state: "latest", name: "git-lfs" }
+  - { state: "latest", name: "make" }
