@@ -22,14 +22,17 @@ _rpm_key:
     fingerprint: "A20D08E41D1D04A04D12CD03D027780B703DF089"
     state: "present"
 
-_rpm_repository:
-  - name: "https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm"
-    state: "latest"
-  - name: "https://packages.endpoint.com/rhel/7/os/x86_64/endpoint-repo-1.7-1.x86_64.rpm"
-    state: "latest"
+_rpm_download:
+  - url: "https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm"
+    dest: "/var/cache/ansible/46fa100dbf4c103e1b33f04128a837028d603939ef5d72026c4ab9dadcd55bed/epel-release-latest-7.noarch.rpm"
+    checksum: "sha256:46fa100dbf4c103e1b33f04128a837028d603939ef5d72026c4ab9dadcd55bed"
+  - url: "https://packages.endpoint.com/rhel/7/os/x86_64/endpoint-repo-1.7-1.x86_64.rpm"
+    dest: "/var/cache/ansible/245a4ab2d8e6dc57ec26c2a56e8d5a6cf12cc831cf339cdc0e983fd408ef139e/endpoint-repo-1.7-1.x86_64.rpm"
+    checksum: "sha256:245a4ab2d8e6dc57ec26c2a56e8d5a6cf12cc831cf339cdc0e983fd408ef139e"
 
 _yum:
   - { state: "latest", name: "bash-completion" }
   - { state: "latest", name: "git" }
   - { state: "latest", name: "git-lfs" }
   - { state: "latest", name: "make" }
+  - { state: "latest", name: "tar" }
