@@ -16,7 +16,7 @@
 
 _zypper_repository:
   - name: "devel:tools:scm"
-    repo: "https://download.opensuse.org/repositories/devel:/tools:/scm/openSUSE_Leap_15.2"
+    repo: "http://download.opensuse.org/repositories/devel:/tools:/scm/openSUSE_Leap_15.2"
     state: "present"
 
 _zypper:

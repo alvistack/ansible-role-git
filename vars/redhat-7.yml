@@ -15,7 +15,7 @@
 # limitations under the License.
 
 _rpm_key:
-  - key: "https://dl.fedoraproject.org/pub/epel/RPM-GPG-KEY-EPEL-7"
+  - key: "http://dl.fedoraproject.org/pub/epel/RPM-GPG-KEY-EPEL-7"
     fingerprint: "91E97D7C4A5E96F17F3E888F6A2FAEA2352C64E5"
     state: "present"
   - key: "https://packages.endpoint.com/endpoint-rpmsign-7.pub"
@@ -23,7 +23,7 @@ _rpm_key:
     state: "present"
 
 _rpm_download:
-  - url: "https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm"
+  - url: "http://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm"
     dest: "/var/cache/ansible/46fa100dbf4c103e1b33f04128a837028d603939ef5d72026c4ab9dadcd55bed/epel-release-latest-7.noarch.rpm"
     checksum: "sha256:46fa100dbf4c103e1b33f04128a837028d603939ef5d72026c4ab9dadcd55bed"
   - url: "https://packages.endpoint.com/rhel/7/os/x86_64/endpoint-repo-1.7-1.x86_64.rpm"
