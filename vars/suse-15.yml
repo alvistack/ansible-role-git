@@ -24,4 +24,3 @@ _zypper:
   - { state: "latest", name: "git" }
   - { state: "latest", name: "git-lfs" }
   - { state: "latest", name: "make" }
-  - { state: "latest", name: "tar" }
