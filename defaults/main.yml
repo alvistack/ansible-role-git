@@ -19,3 +19,11 @@ git_flow_version: "1.12.3"
 
 # git-flow download details.
 git_flow_download: "{{ _git_flow_download[git_flow_version] }}"
+
+# GIT global config.
+git_config:
+  - { state: "present", scope: "global", name: "color.ui", value: "auto" }
+  - { state: "present", scope: "global", name: "commit.gpgsign", value: "true" }
+  - { state: "present", scope: "global", name: "format.signoff", value: "true" }
+  - { state: "present", scope: "global", name: "init.defaultBranch", value: "master" }
+  - { state: "present", scope: "global", name: "push.default", value: "simple" }
