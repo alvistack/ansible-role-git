@@ -55,6 +55,14 @@
     - { dest: "/usr/local/bin" }
     - { dest: "/usr/local/share/doc/gitflow" }
 
+- name: git config
+  git_config:
+    scope: "{{ item.scope }}"
+    name: "{{ item.name }}"
+    value: "{{ item.value }}"
+    state: "{{ item.state }}"
+  loop: "{{ git_config }}"
+
 - name: download archive
   shell: |
     set -euo pipefail
@@ -107,14 +115,6 @@
   loop:
     - { dest: "/etc/bash_completion.d/git-flow" }
     - { dest: "/usr/local/bin/git-flow", mode: "0755" }
-
-- name: git config
-  git_config:
-    scope: "{{ item.scope }}"
-    name: "{{ item.name }}"
-    value: "{{ item.value }}"
-    state: "{{ item.state }}"
-  loop: "{{ git_config }}"
 
 - name: git lfs install --system --skip-repo
   shell: |
