@@ -19,3 +19,9 @@ git_flow_version: "1.12.3"
 
 # git-flow download details.
 git_flow_download: "{{ _git_flow_download[git_flow_version] }}"
+
+# GIT system config.
+git_config:
+  - { state: "present", scope: "system", name: "color.ui", value: "auto" }
+  - { state: "present", scope: "system", name: "init.defaultBranch", value: "master" }
+  - { state: "present", scope: "system", name: "push.default", value: "simple" }
