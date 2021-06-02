@@ -17,5 +17,5 @@
 _git_flow_download:
   "1.12.3":
     url: "http://github.com/petervanderdoes/gitflow-avh/archive/1.12.3.tar.gz"
-    dest: "/var/cache/ansible/54e9fd81aa1aa8215c865503dc6377da205653c784d6c97baad3dafd20728e06/gitflow-avh-1.12.3.tar.gz"
-    sha256sum: "54e9fd81aa1aa8215c865503dc6377da205653c784d6c97baad3dafd20728e06"
+    dest: "/tmp/54e9fd81aa1aa8215c865503dc6377da205653c784d6c97baad3dafd20728e06/gitflow-avh-1.12.3.tar.gz"
+    checksum: "54e9fd81aa1aa8215c865503dc6377da205653c784d6c97baad3dafd20728e06"
