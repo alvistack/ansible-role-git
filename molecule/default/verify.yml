@@ -20,7 +20,7 @@
   tasks:
     - name: git --version
       shell: |
-        set -euo pipefail
+        set -euxo pipefail
         git --version
       args:
         executable: "/bin/bash"
@@ -31,7 +31,7 @@
       environment:
         PATH: "/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
       shell: |
-        set -euo pipefail
+        set -euxo pipefail
         git-flow --help
       args:
         executable: "/bin/bash"
@@ -41,7 +41,7 @@
 
     - name: git-lfs --version
       shell: |
-        set -euo pipefail
+        set -euxo pipefail
         git-lfs --version
       args:
         executable: "/bin/bash"

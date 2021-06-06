@@ -75,7 +75,7 @@
 
 - name: download archive
   shell: |
-    set -euo pipefail
+    set -euxo pipefail
     TMP_DIR="$(mktemp -d)" \
       && cd $TMP_DIR \
       && mkdir -p .{{ item.dest | dirname }} \
@@ -94,7 +94,7 @@
 
 - name: unarchive package
   shell: |
-    set -euo pipefail
+    set -euxo pipefail
     mkdir -p /var/log/ansible
     exec &> >(tee -a /var/log/ansible/{{ git_flow_download.checksum }}.log)
     TMP_DIR="$(mktemp -d)" \
@@ -129,7 +129,7 @@
 
 - name: git lfs install --system --skip-repo
   shell: |
-    set -euo pipefail
+    set -euxo pipefail
     git lfs install --system --skip-repo
   args:
     executable: "/bin/bash"
