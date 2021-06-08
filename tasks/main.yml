@@ -75,28 +75,28 @@
 
 - name: download archive
   shell: |
-    set -euo pipefail
+    set -euxo pipefail
+    mkdir -p /var/log/ansible
+    exec &> >(tee -a /var/log/ansible/{{ git_flow_download.checksum }}-get_url.log)
     TMP_DIR="$(mktemp -d)" \
       && cd $TMP_DIR \
-      && mkdir -p .{{ item.dest | dirname }} \
-      && curl -skL -m 300 {{ item.url }} > .{{ item.dest }} \
-      && echo -n "{{ item.checksum }} .{{ item.dest }}" | sha256sum -c - \
-      && mkdir -p {{ item.dest | dirname }} \
-      && mv .{{ item.dest }} {{ item.dest }} \
+      && mkdir -p .{{ git_flow_download.dest | dirname }} \
+      && curl -skL -m 300 {{ git_flow_download.url }} > .{{ git_flow_download.dest }} \
+      && echo -n "{{ git_flow_download.checksum }} .{{ git_flow_download.dest }}" | sha256sum -c - \
+      && mkdir -p {{ git_flow_download.dest | dirname }} \
+      && mv .{{ git_flow_download.dest }} {{ git_flow_download.dest }} \
       && rm -rf $TMP_DIR
   args:
     executable: "/bin/bash"
-    creates: "{{ item.dest | dirname }}"
-  loop:
-    - "{{ git_flow_download }}"
+    creates: "/var/log/ansible/{{ git_flow_download.checksum }}-get_url.log"
   register: result
   until: result is succeeded
 
 - name: unarchive package
   shell: |
-    set -euo pipefail
+    set -euxo pipefail
     mkdir -p /var/log/ansible
-    exec &> >(tee -a /var/log/ansible/{{ git_flow_download.checksum }}.log)
+    exec &> >(tee -a /var/log/ansible/{{ git_flow_download.checksum }}-unarchive.log)
     TMP_DIR="$(mktemp -d)" \
       && tar -zx -C $TMP_DIR -f {{ git_flow_download.dest }} --strip-components=1 \
       && cd $TMP_DIR \
@@ -104,7 +104,7 @@
       && rm -rf $TMP_DIR
   args:
     executable: "/bin/bash"
-    creates: "/var/log/ansible/{{ git_flow_download.checksum }}.log"
+    creates: "/var/log/ansible/{{ git_flow_download.checksum }}-unarchive.log"
 
 - name: copy templates
   template:
@@ -129,7 +129,7 @@
 
 - name: git lfs install --system --skip-repo
   shell: |
-    set -euo pipefail
+    set -euxo pipefail
     git lfs install --system --skip-repo
   args:
     executable: "/bin/bash"

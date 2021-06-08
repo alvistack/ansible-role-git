@@ -24,10 +24,10 @@ _rpm_key:
 
 _rpm_download:
   - url: "http://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm"
-    dest: "/tmp/46fa100dbf4c103e1b33f04128a837028d603939ef5d72026c4ab9dadcd55bed/epel-release-latest-7.noarch.rpm"
+    dest: "/var/cache/ansible/46fa100dbf4c103e1b33f04128a837028d603939ef5d72026c4ab9dadcd55bed/epel-release-latest-7.noarch.rpm"
     checksum: "46fa100dbf4c103e1b33f04128a837028d603939ef5d72026c4ab9dadcd55bed"
   - url: "https://packages.endpoint.com/rhel/7/os/x86_64/endpoint-repo-1.7-1.x86_64.rpm"
-    dest: "/tmp/245a4ab2d8e6dc57ec26c2a56e8d5a6cf12cc831cf339cdc0e983fd408ef139e/endpoint-repo-1.7-1.x86_64.rpm"
+    dest: "/var/cache/ansible/245a4ab2d8e6dc57ec26c2a56e8d5a6cf12cc831cf339cdc0e983fd408ef139e/endpoint-repo-1.7-1.x86_64.rpm"
     checksum: "245a4ab2d8e6dc57ec26c2a56e8d5a6cf12cc831cf339cdc0e983fd408ef139e"
 
 _yum:
