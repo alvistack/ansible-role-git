@@ -1,13 +1,9 @@
 # Ansible Role for GIT
 
-[![Gitlab pipeline
-status](https://img.shields.io/gitlab/pipeline/alvistack/ansible-role-git/master)](https://gitlab.com/alvistack/ansible-role-git/-/pipelines)
-[![GitHub
-release](https://img.shields.io/github/release/alvistack/ansible-role-git.svg)](https://github.com/alvistack/ansible-role-git/releases)
-[![GitHub
-license](https://img.shields.io/github/license/alvistack/ansible-role-git.svg)](https://github.com/alvistack/ansible-role-git/blob/master/LICENSE)
-[![Ansible
-Role](https://img.shields.io/badge/galaxy-alvistack.git-blue.svg)](https://galaxy.ansible.com/alvistack/git)
+[![Gitlab pipeline status](https://img.shields.io/gitlab/pipeline/alvistack/ansible-role-git/master)](https://gitlab.com/alvistack/ansible-role-git/-/pipelines)
+[![GitHub release](https://img.shields.io/github/release/alvistack/ansible-role-git.svg)](https://github.com/alvistack/ansible-role-git/releases)
+[![GitHub license](https://img.shields.io/github/license/alvistack/ansible-role-git.svg)](https://github.com/alvistack/ansible-role-git/blob/master/LICENSE)
+[![Ansible Role](https://img.shields.io/badge/galaxy-alvistack.git-blue.svg)](https://galaxy.ansible.com/alvistack/git)
 
 Ansible Role for GIT Installation.
 
@@ -43,8 +39,7 @@ This role could simply deploy to `localhost` as below:
 ## License
 
   - Code released under [Apache License 2.0](LICENSE)
-  - Docs released under [CC BY
-    4.0](http://creativecommons.org/licenses/by/4.0/)
+  - Docs released under [CC BY 4.0](http://creativecommons.org/licenses/by/4.0/)
 
 ## Author Information
 
