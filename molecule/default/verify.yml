@@ -28,8 +28,6 @@
       changed_when: result is not succeeded
 
     - name: git-flow --help
-      environment:
-        PATH: "/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
       shell: |
         set -euxo pipefail
         git-flow --help

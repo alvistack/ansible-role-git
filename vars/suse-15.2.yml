@@ -18,9 +18,11 @@ _zypper_repository:
   - name: "devel:tools:scm"
     repo: "http://download.opensuse.org/repositories/devel:/tools:/scm/openSUSE_Leap_15.2"
     state: "present"
+  - name: "home:alvistack"
+    repo: "http://download.opensuse.org/repositories/home:/alvistack/openSUSE_Leap_15.2"
+    state: "present"
 
 _zypper:
-  - { state: "latest", name: "bash-completion" }
   - { state: "latest", name: "git" }
+  - { state: "latest", name: "git-flow" }
   - { state: "latest", name: "git-lfs" }
-  - { state: "latest", name: "make" }
