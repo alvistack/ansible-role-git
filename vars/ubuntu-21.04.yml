@@ -15,16 +15,11 @@
 # limitations under the License.
 
 _apt_key:
-  - url: "http://keyserver.ubuntu.com/pks/lookup?op=get&search=0xE1DD270288B4E6030699E45FA1715D88E1DF1F24"
-    id: "E1DD270288B4E6030699E45FA1715D88E1DF1F24"
-    state: "present"
   - url: "http://download.opensuse.org/repositories/home:/alvistack/xUbuntu_21.04/Release.key"
     id: "789CFFDE0295B8A1F4E5690C4BECC97550D0B1FD"
     state: "present"
 
 _apt_repository:
-  - repo: "deb http://ppa.launchpad.net/git-core/ppa/ubuntu hirsute main"
-    state: "present"
   - repo: "deb http://download.opensuse.org/repositories/home:/alvistack/xUbuntu_21.04 /"
     state: "present"
 

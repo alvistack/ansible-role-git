@@ -15,9 +15,6 @@
 # limitations under the License.
 
 _zypper_repository:
-  - name: "devel:tools:scm"
-    repo: "http://download.opensuse.org/repositories/devel:/tools:/scm/openSUSE_Leap_15.3"
-    state: "present"
   - name: "home:alvistack"
     repo: "http://download.opensuse.org/repositories/home:/alvistack/openSUSE_Leap_15.3"
     state: "present"
