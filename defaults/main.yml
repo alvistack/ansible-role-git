@@ -14,15 +14,6 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# git-flow release.
-git_flow_release: "1.12"
-
-# git-flow version.
-git_flow_version: "{{ _git_flow_version[git_flow_release] }}"
-
-# git-flow download details.
-git_flow_download: "{{ _git_flow_download[git_flow_version] }}"
-
 # GIT system config.
 git_config:
   - { state: "present", scope: "system", name: "color.ui", value: "auto" }

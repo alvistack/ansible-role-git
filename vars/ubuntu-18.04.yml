@@ -15,16 +15,15 @@
 # limitations under the License.
 
 _apt_key:
-  - url: "http://keyserver.ubuntu.com/pks/lookup?op=get&search=0xE1DD270288B4E6030699E45FA1715D88E1DF1F24"
-    id: "E1DD270288B4E6030699E45FA1715D88E1DF1F24"
+  - url: "http://download.opensuse.org/repositories/home:/alvistack/xUbuntu_18.04/Release.key"
+    id: "789CFFDE0295B8A1F4E5690C4BECC97550D0B1FD"
     state: "present"
 
 _apt_repository:
-  - repo: "deb http://ppa.launchpad.net/git-core/ppa/ubuntu bionic main"
+  - repo: "deb http://download.opensuse.org/repositories/home:/alvistack/xUbuntu_18.04 /"
     state: "present"
 
 _apt:
-  - { state: "latest", name: "bash-completion" }
   - { state: "latest", name: "git" }
+  - { state: "latest", name: "git-flow" }
   - { state: "latest", name: "git-lfs" }
-  - { state: "latest", name: "make" }
