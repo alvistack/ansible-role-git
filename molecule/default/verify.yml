@@ -19,7 +19,7 @@
   become: true
   tasks:
     - name: git --version
-      shell: |
+      ansible.builtin.shell: |
         set -euxo pipefail
         git --version
       args:
@@ -28,7 +28,7 @@
       changed_when: result is not succeeded
 
     - name: git-flow --help
-      shell: |
+      ansible.builtin.shell: |
         set -euxo pipefail
         git-flow --help
       args:
@@ -38,7 +38,7 @@
       failed_when: "'usage: git flow <subcommand>' not in result.stdout"
 
     - name: git-lfs --version
-      shell: |
+      ansible.builtin.shell: |
         set -euxo pipefail
         git-lfs --version
       args:
