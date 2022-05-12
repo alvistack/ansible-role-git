@@ -18,30 +18,12 @@
   remote_user: root
   become: true
   tasks:
-    - name: git --version
-      ansible.builtin.shell: |
-        set -euxo pipefail
-        git --version
-      args:
-        executable: "/bin/bash"
+    - name: ansible --version
+      ansible.builtin.command: ansible --version
       register: result
       changed_when: result is not succeeded
 
-    - name: git-flow --help
-      ansible.builtin.shell: |
-        set -euxo pipefail
-        git-flow --help
-      args:
-        executable: "/bin/bash"
-      register: result
-      changed_when: result is not succeeded
-      failed_when: "'usage: git flow <subcommand>' not in result.stdout"
-
-    - name: git-lfs --version
-      ansible.builtin.shell: |
-        set -euxo pipefail
-        git-lfs --version
-      args:
-        executable: "/bin/bash"
+    - name: ansible-lint --version
+      ansible.builtin.command: ansible-lint --version
       register: result
       changed_when: result is not succeeded
