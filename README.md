@@ -1,6 +1,6 @@
 # Ansible Role for GIT
 
-<img src="/alvistack.svg" width="75" alt="AlviStack">
+<a href="https://alvistack.com" title="AlviStack" target="_blank"><img src="/alvistack.svg" height="75" alt="AlviStack"></a>
 
 [![Gitlab pipeline status](https://img.shields.io/gitlab/pipeline/alvistack/ansible-role-git/master)](https://gitlab.com/alvistack/ansible-role-git/-/pipelines)
 [![GitHub tag](https://img.shields.io/github/tag/alvistack/ansible-role-git.svg)](https://github.com/alvistack/ansible-role-git/tags)
