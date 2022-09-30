@@ -54,7 +54,7 @@
       skip: true
 
 - name: git config
-  git_config:
+  community.general.git_config:
     scope: "{{ item.scope }}"
     name: "{{ item.name }}"
     value: "{{ item.value }}"
