@@ -62,9 +62,10 @@
   loop: "{{ git_config }}"
 
 - name: git lfs install --system --skip-repo
-  ansible.builtin.shell: |
-    set -euxo pipefail
-    git lfs install --system --skip-repo
+  ansible.builtin.shell:
+    cmd: |
+      set -euxo pipefail
+      git lfs install --system --skip-repo
   args:
     executable: "/bin/bash"
   register: result
