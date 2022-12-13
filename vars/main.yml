@@ -13,3 +13,10 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
+
+_git_version:
+  "2.39": "2.39.0"
+  "2.38": "2.38.2"
+  "2.37": "2.37.4"
+  "2.36": "2.36.3"
+  "2.35": "2.35.5"

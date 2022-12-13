@@ -26,6 +26,6 @@ _apt_repository:
     state: "present"
 
 _apt:
-  - { state: "latest", name: "git" }
+  - { state: "present", name: "git=100:{{ git_version }}*" }
   - { state: "latest", name: "git-flow" }
   - { state: "latest", name: "git-lfs" }
