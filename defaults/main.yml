@@ -15,7 +15,7 @@
 # limitations under the License.
 
 # GIT release.
-git_release: "2.41"
+git_release: "2.42"
 
 # GIT version.
 git_version: "{{ _git_version[git_release] }}"
