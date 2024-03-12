@@ -22,7 +22,7 @@ git_version: "{{ _git_version[git_release] }}"
 
 # GIT system config.
 git_config:
-  - { state: "present", scope: "system", name: "color.ui", value: "auto" }
-  - { state: "present", scope: "system", name: "init.defaultBranch", value: "master" }
-  - { state: "present", scope: "system", name: "push.default", value: "simple" }
-  - { state: "present", scope: "system", name: "safe.directory", value: "*" }
+  - { state: present, scope: system, name: color.ui, value: auto }
+  - { state: present, scope: system, name: init.defaultBranch, value: master }
+  - { state: present, scope: system, name: push.default, value: simple }
+  - { state: present, scope: system, name: safe.directory, value: "*" }

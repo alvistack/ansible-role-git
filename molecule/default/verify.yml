@@ -1,5 +1,4 @@
 ---
-
 # Copyright 2024 Wong Hoi Sing Edison <hswong3i@pantarei-design.com>
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -25,7 +24,7 @@
           set -euxo pipefail
           git --version
       args:
-        executable: "/bin/bash"
+        executable: /bin/bash
       register: result
       changed_when: result is not succeeded
 
@@ -35,7 +34,7 @@
           set -euxo pipefail
           git-flow --help
       args:
-        executable: "/bin/bash"
+        executable: /bin/bash
       register: result
       changed_when: result is not succeeded
       failed_when: "'usage: git flow <subcommand>' not in result.stdout"
@@ -46,6 +45,6 @@
           set -euxo pipefail
           git-lfs --version
       args:
-        executable: "/bin/bash"
+        executable: /bin/bash
       register: result
       changed_when: result is not succeeded
