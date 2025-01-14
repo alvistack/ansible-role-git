@@ -14,7 +14,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-_git_release: "2.47"
+_git_release: "2.48"
 
 _rpm_key:
   - key: http://downloadcontent.opensuse.org/repositories/home:/alvistack/Fedora_41/repodata/repomd.xml.key
