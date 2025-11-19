@@ -14,7 +14,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-_git_release: "2.51"
+_git_release: "2.52"
 
 _rpm_key:
   - key: http://downloadcontent.opensuse.org/repositories/home:/alvistack/CentOS_10_Stream/repodata/repomd.xml.key
