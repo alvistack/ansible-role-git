@@ -18,7 +18,7 @@
 git_release: "{{ _git_release }}"
 
 # GIT version.
-git_version: "{{ _git_version[git_release] }}"
+git_version: "{{ _git_version }}"
 
 # GIT system config.
 git_config:

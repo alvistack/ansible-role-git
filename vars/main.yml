@@ -14,7 +14,8 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-_git_version:
+_git_version: "{{ __git_version[git_release] }}"
+__git_version:
   "2.54": 2.54.0
   "2.53": 2.53.0
   "2.52": 2.52.0
